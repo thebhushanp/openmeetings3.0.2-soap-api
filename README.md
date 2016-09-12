@@ -7,5 +7,4 @@ If you are using linux, then do ``curl http://localhost:5080/openmeetings/servic
   4. Execute ``./wsdl2java -p the.bhushan.service.user -d /tmp /tmp/userservice.wsdl``
 (-p name of package, -d output directory)
   5. If above command executed successfully, then you should be able to see the Java classes in /tmp/the/bhushan/service/user directory.
-  6. Repeat step 1 to 5 for other services too,
-   - ``{om-host}:{port}/openmeetings/services/RoomService?wsdl``
+  6. Repeat step 1 to 5 for other services(RoomService, RecordService) too.
