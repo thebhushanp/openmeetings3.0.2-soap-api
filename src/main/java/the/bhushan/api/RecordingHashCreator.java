@@ -17,7 +17,7 @@ public class RecordingHashCreator {
 		exUser.setExternalType("my-type");
 		RoomOptionsDTO roomOts = new RoomOptionsDTO();
 		roomOts.setRecordingId(recId);
-		roomOts.setRoomId(null);
+		// roomOts.setRoomId(null);
 		String hash = userWS.getUserService().getRoomHash(sid, exUser, roomOts)
 				.getMessage();
 		return hash;
