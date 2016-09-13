@@ -8,7 +8,7 @@ public class Login {
 	public String doLogin(String user, String pass) {
 		UserWebService ws = new UserWebService();
 		// Do the login
-		ServiceResult result = ws.getUserService().login("bhushan", "bhushan");
+		ServiceResult result = ws.getUserService().login(user, pass);
 		// Getting sid, this session id will required for all other soap
 		// transactions.
 		String sid = result.getMessage();
