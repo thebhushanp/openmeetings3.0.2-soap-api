@@ -2,6 +2,7 @@ package the.bhushan.api;
 
 import the.bhushan.service.room.RoomDTO;
 import the.bhushan.service.room.ServiceException_Exception;
+import the.bhushan.service.user.ExternalUserDTO;
 
 public class Test {
 	public static void main(String[] args) throws ServiceException_Exception,
@@ -18,11 +19,16 @@ public class Test {
 
 		// generate hash for the newly created room
 		UserHashCreator userHash = new UserHashCreator();
-		String uHash = userHash.addUserAndGenHash(sid, rDTO);
+		ExternalUserDTO exUser = new ExternalUserDTO();
+		exUser.setFirstname("Sopya");
+		exUser.setLastname("Choudhary");
+		exUser.setExternalId("abc");
+		exUser.setExternalType("my-type");
+		String uHash = userHash.addUserAndGenHash(sid, exUser, rDTO);
 		System.out.println(uHash);
 
-		//FIXME following part is not working.
-		
+		// FIXME following part is not working.
+
 		// RecordingFetcher rf = new RecordingFetcher();
 		// Long id = rf.getRecordings(sid, 304L).get(0).getId();
 		// RecordingHashCreator rHasher = new RecordingHashCreator();

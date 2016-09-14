@@ -9,13 +9,8 @@ import the.bhushan.service.user.UserWebService;
 
 public class UserHashCreator {
 
-	public String addUserAndGenHash(String sid, RoomDTO newRDTO)
-			throws ServiceException_Exception {
-		ExternalUserDTO exUser = new ExternalUserDTO();
-		exUser.setFirstname("Sopya");
-		exUser.setLastname("Choudhary");
-		exUser.setExternalId("abc");
-		exUser.setExternalType("my-type");
+	public String addUserAndGenHash(String sid, ExternalUserDTO exUser,
+			RoomDTO newRDTO) throws ServiceException_Exception {
 
 		RoomOptionsDTO roomOps = new RoomOptionsDTO();
 		roomOps.setRoomId(newRDTO.getId());
