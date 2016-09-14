@@ -13,6 +13,7 @@ public class Test {
 		String sid = login.doLogin("bhushan", "bhushan");
 
 		// create room
+
 		RoomCreator rCreator = new RoomCreator();
 		RoomDTO rDTO = rCreator.createRoom(sid);
 		System.out.println("RoomID=" + rDTO.getId());
@@ -27,12 +28,14 @@ public class Test {
 		String uHash = userHash.addUserAndGenHash(sid, exUser, rDTO);
 		System.out.println(uHash);
 
-		// FIXME following part is not working.
-
+		// generate the hash for recording
+		
 		// RecordingFetcher rf = new RecordingFetcher();
-		// Long id = rf.getRecordings(sid, 304L).get(0).getId();
+		// Long id = rf.getRecordings(sid, 401L).get(0).getId();
 		// RecordingHashCreator rHasher = new RecordingHashCreator();
 		// String recordHash = rHasher.getRecordingHash(sid, id);
 		// System.out.println(recordHash);
+
+		// http://localhost:5080/openmeetings/recording/recordHash
 	}
 }
