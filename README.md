@@ -1,7 +1,7 @@
 ## Generate Soap client using``wsdl2java``of [Apache cxf](http://cxf.apache.org/download.html).
 
   1. Copy the content of {om-host}:{port}/openmeetings/services/UserService?wsdl to some file.
-If you are using linux, then do ``curl http://localhost:5080/openmeetings/services/UserService?wsdl > /tmp/userservice.wsdl``
+If you are using Linux, then do ``curl http://localhost:5080/openmeetings/services/UserService?wsdl > /tmp/userservice.wsdl``
   2. Download binary distrubution of Apache cxf and extract it.
   3. Go to bin directory.
   4. Execute ``./wsdl2java -p the.bhushan.service.user -d /tmp /tmp/userservice.wsdl``
